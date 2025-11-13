@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- App container centered via CSS -->
+    <main class="calculator" aria-label="Basic calculator">
+      <!-- Display: shows live expression and result -->
+      <section class="display" aria-live="polite" aria-atomic="true">
+        <div id="expression" class="expression">0</div>
+        <div id="result" class="result"></div>
+        <img id="easter" class="easter" src="assets/gorilla.png" alt="Gorilla" />
+      </section>
+
+      <!-- Keys: no inline handlers; JS uses event delegation -->
+      <section class="keys" role="group" aria-label="Calculator keys">
+        <!-- Row 1 -->
+        <button type="button" class="key function" data-key="clear">C</button>
+        <button
+          type="button"
+          class="key function"
+          data-key="backspace"
+          aria-label="Backspace"
+          title="Backspace"
+        >⌫</button>
+        <button type="button" class="key operator" data-key="/">/</button>
+        <button type="button" class="key operator" data-key="*">*</button>
+
+        <!-- Row 2 -->
+        <button type="button" class="key" data-key="7">7</button>
+        <button type="button" class="key" data-key="8">8</button>
+        <button type="button" class="key" data-key="9">9</button>
+        <button type="button" class="key operator" data-key="-">-</button>
+
+        <!-- Row 3 -->
+        <button type="button" class="key" data-key="4">4</button>
+        <button type="button" class="key" data-key="5">5</button>
+        <button type="button" class="key" data-key="6">6</button>
+        <button type="button" class="key operator" data-key="+">+</button>
+
+        <!-- Row 4 -->
+        <button type="button" class="key" data-key="1">1</button>
+        <button type="button" class="key" data-key="2">2</button>
+        <button type="button" class="key" data-key="3">3</button>
+        <button type="button" class="key equals" data-key="=" aria-label="Equals">=</button>
+
+        <!-- Row 5 -->
+        <button type="button" class="key span-2" data-key="0">0</button>
+        <button type="button" class="key" data-key=".">.</button>
+        <!-- The equals key spans two rows via CSS -->
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+  </html>
