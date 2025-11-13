@@ -113,6 +113,7 @@ body {
 @media (max-width: 380px) {
   .calculator { padding: 0.75rem; border-radius: 16px; }
   .key { padding: 0.75rem; min-height: 2.75rem; border-radius: 10px; }
+  .result { font-size: clamp(1.25rem, 4.4vw, 2.25rem); }
 }
 
 @media (prefers-reduced-motion: reduce) {
