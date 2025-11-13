@@ -116,6 +116,10 @@ body {
   .result { font-size: clamp(1.25rem, 4.4vw, 2.25rem); }
 }
 
+@media (max-width: 768px) {
+    .result { font-size: clamp(1.25rem, 4.4vw, 2.25rem); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .key { transition: none; }
 }
