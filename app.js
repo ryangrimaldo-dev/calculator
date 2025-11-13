@@ -117,21 +117,6 @@ function sanitize(expr) {
 
 // Evaluate expression; show result
 function evaluateExpression() {
-  const safeExpr = sanitize(expression);
-  if (!safeExpr) return;
-  try {
-    // Use Function constructor for basic evaluation after strict sanitization
-    const result = Function(`"use strict"; return (${safeExpr})`)();
-    justEvaluated = true;
-    resultEl.textContent = "SOLVE IT URSELF NIGGA";
-  } catch {
-    resultEl.textContent = "SOLVE IT URSELF NIGGA";
-  }
-  if (resultHideTimerId) { clearTimeout(resultHideTimerId); }
-  resultHideTimerId = setTimeout(() => {
-    resultEl.textContent = "";
-    resultHideTimerId = null;
-  }, 3000);
   if (easterEl) {
     if (hideTimerId) { clearTimeout(hideTimerId); }
     easterEl.classList.add("visible");
